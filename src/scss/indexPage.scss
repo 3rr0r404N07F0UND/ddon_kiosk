@@ -1,0 +1,231 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "KCC-Ganpan";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  box-sizing: border-box;
+  font-family: "Nanum Gothic", sans-serif;
+}
+.pointFont {
+  font-family: "KCC-Ganpan" !important;
+}
+//html,
+//body {
+//  width: 108rem;
+//  height: 192rem;
+//}
+.clickBox {
+  position: relative;
+  top: -37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 11.5rem;
+    height: auto;
+    animation: bigSmall 2s infinite;
+  }
+  p {
+    font-size: 4rem;
+    color: #ea8778;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1rem;
+    margin-top: 1.5rem;
+    padding-left: 2rem;
+  }
+}
+@keyframes bigSmall {
+  0% {
+      transform: scale(1.0);
+  }
+  50% {
+      transform: scale(1.3);
+  }
+  100% {
+      transform: scale(1.0);
+  }
+}
+.allBox {
+  background-image: url(../img/pinkbg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  //position: absolute;
+  //top: 50%;
+  //left: 50%;
+  //transform: translate(0, -50%);
+  cursor: pointer;
+  width: 108rem;
+  height: 192rem;
+  margin: auto;
+}
+.indexHeader {
+  width: 108rem;
+  height: 47.9rem;
+}
+.headerTop {
+  width: 108rem;
+  height: 21.8rem;
+}
+.logoImg {
+  width: 28.5rem;
+  height: 21.8rem;
+  float: left;
+  padding-top: 4rem;
+  padding-left: 4rem;
+  img {
+    width: 22rem;
+    height: auto;
+  }
+}
+.managerBox {
+  width: 79.5rem;
+  height: 21.8rem;
+  line-height: 21.8rem;
+  float: left;
+}
+.managerBtn {
+  width: 18.2rem;
+  height: 6.9rem;
+  border: 0.2rem solid #898989;
+  color: #898989;
+  border-radius: 3rem;
+  line-height: 6.9rem;
+  font-size: 3.5rem;
+  background-color: transparent;
+  margin-left: 55rem;
+  position: relative;
+  z-index: 1;
+  &:hover {
+    color: #ea8778;
+    border: 0.2rem solid #ea8778;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+}
+.headerBottom {
+  width: 108rem;
+  height: 26.1rem;
+  h1 {
+    font-size: 18rem;
+    color: #8c703a;
+    text-align: center;
+  }
+}
+.indexMain {
+  width: 108rem;
+  height: 112.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  section {
+    width: 108rem;
+    height: 37.6rem;
+    img {
+      width: 48rem;
+      height: auto;
+      margin-top: 3rem;
+      float: left;
+    }
+    .menuTextBox {
+      width: 60rem;
+      height: 37.6rem;
+      padding-top: 10rem;
+      padding-bottom: 13rem;
+      float: left;
+      .titleUnderLineTopBottom {
+        width: 61.5rem;
+        height: 0.3rem;
+        background-color: #666;
+        position: relative;
+        left: -6rem;
+      }
+      .titleUnderLineMiddle {
+        width: 61.5rem;
+        height: 0.3rem;
+        background-color: #666;
+        position: relative;
+        left: 4.4rem;
+      }
+      h2 {
+        font-size: 5.8rem;
+        color: #555;
+        padding-bottom: 1.5rem;
+        position: relative;
+        &::before {
+          content: "pick";
+          width: 13.4rem;
+          height: 4.5rem;
+          background-color: #ea8778;
+          border-radius: 3rem;
+          position: absolute;
+          color: white;
+          font-size: 3.5rem;
+          text-align: center;
+          top: -5.5rem;
+        }
+      }
+      p {
+        font-size: 5rem;
+        color: #555;
+        padding-top: 1.5rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+.indexMain section:nth-child(2) .menuTextBox {
+  h2 {
+    margin-left: 5rem;
+  }
+  p {
+    margin-left: 5rem;
+  }
+}
+.indexMain section:nth-child(1) .menuTextBox {
+  h2 {
+    margin-left: 10rem;
+    &::before {
+      left: 31rem;
+    }
+  }
+  p {
+    margin-left: 31.5rem;
+  }
+}
+.indexMain section:nth-child(3) .menuTextBox {
+  h2 {
+    margin-left: 21rem;
+    &::before {
+      left: 20rem;
+    }
+  }
+  p {
+    margin-left: 32rem;
+  }
+}
+.indexFooter {
+  width: 108rem;
+  height: 31.3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  img {
+    width: 20rem;
+    height: auto;
+    margin-top: 17rem;
+  }
+}

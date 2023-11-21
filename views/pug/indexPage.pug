@@ -1,0 +1,60 @@
+doctype html
+html(lang="ko")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="Cache-Control", content="no-cache")
+    meta(http-equiv="Pragma", content="no-chche")
+    meta(http-equiv="build", content="2023, 03, 29")
+    meta(http-equiv="Copyright", content="c17team03_oh_hye_rim")
+    meta(http-equiv="Distribution", content="OH_HRE_RIM")
+    meta(http-equiv="Filename", content="indexPage.pug")
+    link(rel="icon", type="icon", href="./img/favicon.ico")
+    meta(name="robots", content="noindex, nofollow, noarchive")
+    link(rel="stylesheet", href="./css/indexPage.css")
+    script(src="./js/indexPage.js", defer)
+    script(
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js",
+      integrity="sha512-6DC1eE3AWg1bgitkoaRM1lhY98PxbMIbhgYCGV107aZlyzzvaWCW1nJW2vDuYQm06hXrW0As6OGKcIaAVWnHJw==",
+      crossorigin="anonymous"
+    )
+    title 돈돈정 - 맛있는 가정식 요리와 일본의 명주
+  body
+    section.allBox
+      header.indexHeader
+        section.headerTop
+          section.logoImg
+            img(src="./img/imgLogo.png", alt="이미지 로고")
+          section.managerBox
+            form(action="/admin", method="get")
+              input.managerBtn(type="submit", value="관리자")
+        section.headerBottom
+          h1.newTitle.pointFont NEW
+      section.indexMain
+        section
+          img(src="./img/cubeSteak.png", alt="큐브 스테이크")
+          .menuTextBox
+            h2 큐브 스테이크 정식
+            .titleUnderLineTopBottom
+            p 16,000 원
+        section
+          .menuTextBox
+            h2 치킨 그릴 정식
+            .titleUnderLineMiddle
+            p 10,000 원
+          img(src="./img/chickenGril.png", alt="치킨 그릴")
+        section
+          img(src="./img/hambakGril.png", alt="함박 스테이크")
+          .menuTextBox
+            h2 함박 그릴 정식
+            .titleUnderLineTopBottom
+            p 14,000 원
+        .clickBox
+          img(src="./img/pointer.png")
+          p 화면을 <br /> 터치하세요.
+      footer.indexFooter
+        section.footerLogo
+          img(src="./img/textLogo.png", alt="텍스트로고")
+      form(action="order", method="get")
+        input#orderBtn(type="submit" style="display:none")

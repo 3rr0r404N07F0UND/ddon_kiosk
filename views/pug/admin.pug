@@ -1,0 +1,53 @@
+doctype html
+html(lang="ko-KR")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="Cache-Control", content="no-cache")
+    meta(http-equiv="Pragma", content="no-chche")
+    meta(http-equiv="build", content="2023, 03, 29")
+    meta(http-equiv="Copyright", content="c17team03_seo_dong_min")
+    meta(http-equiv="Distribution", content="SEO_DONG_MIN")
+    meta(http-equiv="Filename", content="admin.pug")
+    meta(name="robots", content="noindex, nofollow, noarchive")
+    link(rel="stylesheet", href="./css/admin.css")
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    link(rel="icon", type="icon", href="./img/favicon.ico")
+    script(src="https://unpkg.com/adorable-css", defer)
+    script(
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js",
+      integrity="sha512-6DC1eE3AWg1bgitkoaRM1lhY98PxbMIbhgYCGV107aZlyzzvaWCW1nJW2vDuYQm06hXrW0As6OGKcIaAVWnHJw==",
+      crossorigin="anonymous"
+    )
+    script(src="./js/admin.js", defer)
+    title 관리자 페이지
+  body
+    section.phoneNumberBox0
+          p.fontBold0 비밀번호를 입력해주세요. (비밀번호 1234)
+          form.phoneNumberInput0(action="/adminAccessPage", method="post")
+            input#inputPW(type="text", name="adminPassword", maxlength="4")
+            input#inputSubmitButton(type="submit", class="display(none)")
+          .keyPadBox0
+            button.numberPad0 7
+            button.numberPad0 8
+            button.numberPad0 9
+            button.numberPad0 4
+            button.numberPad0 5
+            button.numberPad0 6
+            button.numberPad0 1
+            button.numberPad0 2
+            button.numberPad0 3
+            button.textPad0#resetBtn0 초기화
+            button.numberPad0 0
+            button.textPad0#removeBtn0 ←
+          .modalButtonBox0
+            form(action="/", method="get")
+              button.phoneNumberBtn0#backButton(type="submit") 돌아가기
+            button.phoneNumberBtn0#okButton  확인
+    section.alertModalBg0
+      section.alertModal0
+        .alertModalContent0
+        button.alertModalBtn0 확인

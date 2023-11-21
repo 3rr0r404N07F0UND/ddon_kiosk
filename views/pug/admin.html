@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-chche">
+    <meta http-equiv="build" content="2023, 03, 29">
+    <meta http-equiv="Copyright" content="c17team03_seo_dong_min">
+    <meta http-equiv="Distribution" content="SEO_DONG_MIN">
+    <meta http-equiv="Filename" content="admin.pug">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="icon" type="icon" href="./img/favicon.ico">
+    <script src="https://unpkg.com/adorable-css" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js" integrity="sha512-6DC1eE3AWg1bgitkoaRM1lhY98PxbMIbhgYCGV107aZlyzzvaWCW1nJW2vDuYQm06hXrW0As6OGKcIaAVWnHJw==" crossorigin="anonymous"></script>
+    <script src="./js/admin.js" defer></script>
+    <title>관리자 페이지</title>
+  </head>
+  <body>
+    <section class="phoneNumberBox0">
+      <p class="fontBold0">비밀번호를 입력해주세요.</p>
+      <form class="phoneNumberInput0" action="/adminAccessPage" method="post">
+        <input id="inputPW" type="text" name="adminPassword" maxlength="4">
+        <input class="display(none)" id="inputSubmitButton" type="submit">
+      </form>
+      <div class="keyPadBox0">
+        <button class="numberPad0">7</button>
+        <button class="numberPad0">8</button>
+        <button class="numberPad0">9</button>
+        <button class="numberPad0">4</button>
+        <button class="numberPad0">5</button>
+        <button class="numberPad0">6</button>
+        <button class="numberPad0">1</button>
+        <button class="numberPad0">2</button>
+        <button class="numberPad0">3</button>
+        <button class="textPad0" id="resetBtn0">초기화</button>
+        <button class="numberPad0">0</button>
+        <button class="textPad0" id="removeBtn0">←</button>
+      </div>
+      <div class="modalButtonBox0">
+        <form action="/" method="get">
+          <button class="phoneNumberBtn0" id="backButton" type="submit">돌아가기</button>
+        </form>
+        <button class="phoneNumberBtn0" id="okButton"> 확인</button>
+      </div>
+    </section>
+    <section class="alertModalBg0">
+      <section class="alertModal0">
+        <div class="alertModalContent0"></div>
+        <button class="alertModalBtn0">확인</button>
+      </section>
+    </section>
+  </body>
+</html>

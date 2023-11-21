@@ -1,0 +1,292 @@
+doctype html
+html(lang="ko")
+head
+  title OrderPage
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(http-equiv="Cache-Control", content="no-cache")
+  meta(http-equiv="Pragma", content="no-chche")
+  meta(http-equiv="build", content="2023, 03, 29")
+  meta(http-equiv="Copyright", content="c17team03_choi_byung_hoon")
+  meta(http-equiv="Distribution", content="CHOI_BYUNG_HOON")
+  meta(http-equiv="Filename", content="teamProject.pug")
+  meta(name="robots", content="noindex, nofollow, noarchive")
+  //link(rel="stylesheet", href="../../src/scss/order.css")
+  script(type="text/javascript", src="./js/order.js", defer)
+  //script(type="text/javascript", src="../../static/js/order.js", defer)
+  link(rel="stylesheet", href="./css/order.css")
+  script(
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+  )
+body
+  #modalOnBackground.modalOnBackground.hoverEffect
+  //.selectPage
+    .selectPageTop
+      .selectPageMark
+      .selectMenuImageBox
+      .selectMenuName 메뉴 이름 : 가나다라마바사아자차
+      .selectMenuPrice 메뉴 금액 : 10000000원
+    .selectPageMiddle
+      .selectMenuDescBox 카라아게 (일본식 닭튀김) 미야자키 명물
+      .selectMenuFoodInfoBox (닭고기, 명란젓, 조각계란찜 , 장국) 429g , 967kcal
+      .selectMenuAllergyInfoBox 닭고기 , 명란젓 , 조각계란찜
+    .selectPageBottom
+      .cansleBt.hoverEffect 취소
+      .acceptBt.hoverEffect 담기
+  .totalWrapBox
+    header
+      .headerBox
+        .topFlowerImage
+        .ddjMark
+        .ddjCenterMark
+        .sideFlowerImage
+    section
+      nav
+        .sideMenu
+          .sideMenuTop MENU
+          .sideMenuMainWrap
+            #maindishTab.maindishTab.hoverEffect
+              #maindishImage.maindishImage
+              #maindishTabName.sideTabName.pointFont 정식
+            #noodleTab.noodleTab.hoverEffect
+              #noodleImage.noodleImage
+              #noodleTabName.sideTabName.pointFont 면류
+            #singleMenuTab.singleMenuTab.hoverEffect
+              #singleImage.singleImage
+              #singleTabName.sideTabName.pointFont 단품
+            #sodaTab.sodaTab.hoverEffect
+              #sodaImage.sodaImage
+              #sodaTabName.sideTabName.pointFont 음료
+            #alcoholTab.alcoholTab.hoverEffect
+              #alcoholImage.alcoholImage
+              #alcoholTabName.sideTabName.pointFont 주류
+        .mainMenuSection
+          #mainMenuWrap1.mainMenuWrap.mainMenuWrapOn
+            each menuList, index in setMenuList
+              .selectFoodBox.hoverEffect(id=`setMenuList${index}`)
+                .foodImage(
+                  style=`background-image:url(./img/mainMenu/${menuList.imgUrl})`
+                )
+                .foodName.pointFont #{ menuList.foodTitle }
+                .foodPrice.pointFont #{ menuList.foodPrice } 원
+                input(id=`setMenuDesc${index}` type='hidden' value=`${menuList.foodDesc}`)
+          #mainMenuWrap2.mainMenuWrap
+            each menuList, index in noodleMenuList
+              .selectFoodBox.hoverEffect(id=`noodleMenuList${index}`)
+                .foodImage(
+                  style=`background-image:url(./img/noodleMenu/${menuList.imgUrl})`
+                )
+                .foodName.pointFont #{ menuList.foodTitle }
+                .foodPrice.pointFont #{ menuList.foodPrice }
+          #mainMenuWrap3.mainMenuWrap
+            each menuList, index in singleMenuList
+              .selectFoodBox.hoverEffect(id=`singleMenuList${index}`)
+                .foodImage(
+                  style=`background-image:url(./img/singleMenu/${menuList.imgUrl})`
+                )
+                .foodName.pointFont #{ menuList.foodTitle }
+                .foodPrice.pointFont #{ menuList.foodPrice }
+          #mainMenuWrap4.mainMenuWrap
+            each menuList, index in sodaMenuList
+              .selectFoodBox.hoverEffect(id=`sodaMenuList${index}`)
+                .foodImage(
+                  style=`background-image:url(./img/sodaMenu/${menuList.imgUrl})`
+                )
+                .foodName.pointFont #{ menuList.foodTitle }
+                .foodPrice.pointFont #{ menuList.foodPrice }
+          #mainMenuWrap5.mainMenuWrap
+            each menuList, index in alcoholMenuList
+              .selectFoodBox.hoverEffect(id=`alcoholMenuList${index}`)
+                .foodImage(
+                  style=`background-image:url(./img/alcoholMenu/${menuList.imgUrl})`
+                )
+                .foodName.pointFont #{ menuList.foodTitle }
+                .foodPrice.pointFont #{ menuList.foodPrice }
+          .mainMenuNav
+            button#mainMenuLeftBt.mainMenuLeftBt.hoverEffect.pointFont(
+              type="button"
+            ) &lt
+            .mainMenuPositionBar
+              .mainMenuPositionCircle.hoverEffect
+              .mainMenuPositionCircle.hoverEffect
+              .mainMenuPositionCircle.hoverEffect
+            button#mainMenuRightBt.mainMenuRightBt.hoverEffect.pointFont(
+              type="button"
+            ) &gt
+    footer
+      .priceCalculateWrap
+        .calculateTop
+          .totalSelectTitle 선택내역
+          .totalPriceResult 10000000원
+          .totalPrice 합계
+          ////////// id -> totalPrice xxxxxxxxxx
+        .calculateMiddle
+          ul
+            li
+              .orderMenuNum 1.
+              .orderMenuName 호르몬 모츠나베 정식
+              .orderMenuPlusOrMinus - 2 +
+              .orderMenuPrice 33,333 원
+              .orderMenuDelete.hoverEffect 취소
+        .calculateBottom
+          .resetBt.hoverEffect 초기화
+          #orderBt.orderBt.hoverEffect 주문하기
+    #selectPage.selectPage
+      .selectPageTop
+        .selectPageMark
+        .selectMenuImageBox
+        .selectMenuName 메뉴 이름 : 가나다라마바사아자차
+        .selectMenuPrice 메뉴 금액 : 10000000원
+      .selectPageMiddle
+        .selectMenuDescBox 카라아게 (일본식 닭튀김) 미야자키 명물
+        .selectMenuFoodInfoBox (닭고기, 명란젓, 조각계란찜 , 장국) 429g , 967kcal
+        .selectMenuAllergyInfoBox 닭고기 , 명란젓 , 조각계란찜
+      .selectPageBottom
+        #cansleBt.cansleBt.hoverEffect 취소
+        #acceptBt.acceptBt.hoverEffect 담기
+  section#allBox.allBox
+    header.paymentHeader
+      section
+        .titleLeft
+          a(href="#")
+            i.xi-home
+            span.pointFont HOME
+        .titleRight
+          img(src="../../static/img/textLogo.png", alt="텍스트로고") 
+    section.paymentMain
+      p.titleOne 주문내역을 확인하신 후 <br /> 결제를 진행해 주세요.
+      p.titleTwo 주문내역
+      hr
+      .menuBox
+        .menuMiniBox 번호
+        .menuMiniBox 주문 제품
+        .menuMiniBox 주문 수량
+        .menuMiniBox 금액
+        .menuMiniBox 삭제
+      ul.menuOrderList
+        - for (let i = 0; i < 1; i++)
+          li(id=`id${0}`)
+            .menuNum 1
+            .menuName 돈까스 정식
+            .menuCountBox
+              button#plusBtn.menuPlusBtn +
+              .menuCount 1
+              button#minusBtn.menuMinusBtn -
+            .menuAmount 10000
+            button.menuDelete 삭제
+          li(id=`id${1}`)
+            .menuNum 2
+            .menuName 메론 정식
+            .menuCountBox
+              button#plusBtn.menuPlusBtn +
+              .menuCount 3
+              button#minusBtn.menuMinusBtn -
+            .menuAmount 10000
+            button.menuDelete 삭제
+    footer.paymentFooter
+      section.footerTop
+        .allOrder 총 주문 수량
+        #allOrderCount.allOrderCounter.fontBold 1
+        .allOrderResult 개
+        .allOrder 총 주문 금액
+        #allPrice.allOrderCounter.fontBold 10000
+        .allOrderResult 원
+      section.footerBottom
+        .footerBtnBox
+          button.footerBtn 이전
+          button#footerBtnOk.footerBtn 결제하기
+    //모달 시작, 모달 배경 - 투명 검정
+    section.modalBg
+      //포인트 적립할 번호 입력 모달
+      section.phoneNumberBox
+        p.fontBold 포인트를 적립할 번호를 입력해 주세요.
+        form.phoneNumberInput(action="/ajaxPoint", method="get")
+          input(type="number", name="phoneNumber")
+        .keyPadBox
+          button.numberPad 7
+          button.numberPad 8
+          button.numberPad 9
+          button.numberPad 4
+          button.numberPad 5
+          button.numberPad 6
+          button.numberPad 1
+          button.numberPad 2
+          button.numberPad 3
+          button#resetBtn.textPad 초기화
+          button.numberPad 0
+          button#removeBtn.textPad ←
+        .modalButtonBox
+          button#notPoint.phoneNumberBtn 적립안함
+          button#okPoint.phoneNumberBtn 확인
+      // 포인트 사용 모달
+      section.usePointBox
+        p.pay 결제하기
+        hr
+        section.paymentBox
+          .resultTextMenu 총 금액
+          #totalPrice.resultNumberMenu 50000
+          .price 원
+          .resultTextMenu 보유 포인트
+          #havePoint.resultNumberMenu 2000
+          .price p
+        section.keyPadArea
+          p 사용 포인트
+          section.inputPhoneNumber
+            .minusPointDiv -
+            form(action="/", method="get")
+              input.numberInputBox(
+                type="number",
+                name="usePoint",
+                placeholder="사용할 포인트를 입력해 주세요."
+              )
+            .minusPointDiv p
+          .keyPadBox2
+            button.numberPad2 7
+            button.numberPad2 8
+            button.numberPad2 9
+            button.numberPad2 4
+            button.numberPad2 5
+            button.numberPad2 6
+            button.numberPad2 1
+            button.numberPad2 2
+            button.numberPad2 3
+            button#resetBtn2.textPad2 초기화
+            button.numberPad2 0
+            button#removeBtn2.textPad2 ←
+        hr
+        section.totalResult
+          div 최종 결제 금액
+          #finalTotalPrice 50000
+          div 원
+        section.totalResultBtnBox
+          button#paymentCancelBtn 취소
+          button#paymentGoBtn 결제
+      //카드 결제 모달
+      section.cardModalBox
+        img(src="../../static/img/card.png", alt="카드")
+        div 결제하실 카드를 넣어 주세요
+          br 
+          | 삼성페이나 다른 NFC결제도 지금 접속해주세요
+        button 취소
+      //결제 진행중 모달
+      section.paymentModal
+        i.xi-spinner-1.xi-spin
+        div <span>결제가 진행중입니다</span><br>잠시만 기다려주세요
+      //결제 완료 모달
+      section.completeModal
+        i.xi-check-square-o
+        .smallFont 결제가 정상적으로 완료되었습니다.
+        .bigFontBox
+          .bigFont 10
+          .bigFont 초후에 자동으로 종료됩니다
+        .completeModalBtnBox
+          form(action="/", method="get")
+            input.completeModalBtn(type="submit", value="영수증 출력")
+          form(action="/", method="get")
+            input.completeModalBtn(type="submit", value="종료")
+      //경고 창 모달
+      section.alertModalBg
+        section.alertModal
+          .alertModalContent 올바른 전화번호 형태가 아닙니다.
+          button.alertModalBtn 확인

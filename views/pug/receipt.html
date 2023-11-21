@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-chche">
+    <meta http-equiv="build" content="2023, 03, 29">
+    <meta http-equiv="Copyright" content="c17team03_oh_hye_rim">
+    <meta http-equiv="Distribution" content="OH_HRE_RIM">
+    <meta http-equiv="Filename" content="payment.pug">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <link rel="stylesheet" href="./css/receipt.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/adorable-css" defer></script>
+    <script src="./js/receipt.js" defer type="text/javascript"></script>
+    <title>receipt</title>
+  </head>
+  <body>
+    <form class="display(none)" action="/" method="get">
+      <input type="submit" value="" id="submitInput">
+    </form>
+    <section class="receiptAllBox">
+      <header>
+        <section class="receiptTopBox">
+          <p class="r_orderNumber">주문 번호 : </p>
+          <p>=======================</p>
+          <h1>[ 카드 판매 영수증 ]</h1>
+        </section>
+        <section class="addressBox">
+          <address>
+            <div class="addressTitle">
+              <p>가맹점명 :</p>
+              <p>대표자명 :</p>
+              <p>사업자 번호 :</p>
+              <p>전화번호 :</p>
+              <p>주소 :</p>
+            </div>
+            <div class="addressText">
+              <p>DonDonJung Line점</p>
+              <p>LINE</p>
+              <p>1234-****-****-****</p>
+              <p>010-****-****</p>
+              <p>안산시 단원구 _____</p>
+            </div>
+          </address>
+        </section>
+        <section class="receiptMenuBox">
+          <p>-----------------------------------------</p>
+          <section class="receiptMenuTitle">
+            <div>상품</div>
+            <div>단가</div>
+            <div>수량</div>
+            <div>금액</div>
+          </section>
+          <p>-----------------------------------------</p>
+          <section class="receiptMenuList">
+            <ul>
+              <!--each menuList in-->
+              <li class="receiptMenuFirst"></li>
+              <li class="receiptMenuOther"></li>
+              <li class="receiptMenuOther"></li>
+              <li class="receiptMenuOther"></li>
+            </ul>
+          </section>
+          <p>-----------------------------------------</p>
+          <section class="receiptMenuText">
+            <div>합계</div>
+            <div></div>
+            <div>원</div>
+          </section>
+          <p>=======================</p>
+        </section>
+        <p class="thankYouText">감사합니다</p>
+      </header>
+    </section>
+  </body>
+</html>

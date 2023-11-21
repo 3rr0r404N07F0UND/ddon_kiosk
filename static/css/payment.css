@@ -1,0 +1,643 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+@font-face {
+  font-family: "KCC-Ganpan";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  box-sizing: border-box;
+  font-family: "Nanum Gothic", sans-serif;
+  list-style: none;
+  color: #333; }
+
+.fontBold {
+  font-weight: bold; }
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #333; }
+
+.pointFont {
+  font-family: "KCC-Ganpan" !important; }
+
+.allBox {
+  width: 108rem;
+  height: 192rem;
+  margin: auto;
+  background-color: ivory;
+  position: relative; }
+
+header {
+  width: 108rem;
+  height: 27.8rem;
+  padding: 5.1rem 31.7rem 5.1rem 7rem;
+  background-color: pink; }
+  header section {
+    width: 68.9rem;
+    height: 17.6rem;
+    display: flex;
+    flex-direction: row; }
+    header section .titleLeft {
+      width: 24.6rem;
+      height: 17.8rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+      header section .titleLeft a i {
+        font-size: 8rem; }
+      header section .titleLeft a span {
+        font-size: 5rem; }
+    header section .titleRight {
+      width: 44.3rem;
+      height: 17.8rem;
+      padding-left: 8rem;
+      padding-top: 3rem; }
+      header section .titleRight img {
+        width: auto;
+        height: 13rem; }
+
+.paymentMain {
+  width: 108rem;
+  height: 119rem;
+  display: flex;
+  flex-direction: column; }
+  .paymentMain hr {
+    color: #666;
+    width: 98rem;
+    margin-left: 5rem; }
+
+.menuBox {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 4rem; }
+
+.menuMiniBox {
+  font-weight: bold; }
+
+.menuMiniBox:first-child, .menuNum {
+  height: 10rem;
+  float: left;
+  text-align: center;
+  font-size: 3rem;
+  width: 11rem; }
+
+.menuMiniBox:nth-child(2), .menuName {
+  height: 10rem;
+  float: left;
+  text-align: center;
+  font-size: 3rem;
+  width: 36.4rem; }
+
+.menuMiniBox:nth-child(3), .menuCountBox {
+  height: 10rem;
+  float: left;
+  text-align: center;
+  font-size: 3rem;
+  width: 17.5rem; }
+
+.menuMiniBox:nth-child(4), .menuAmount {
+  height: 10rem;
+  float: left;
+  text-align: center;
+  font-size: 3rem;
+  width: 23.4rem; }
+
+.menuMiniBox:nth-child(5), .menuDelete {
+  height: 10rem;
+  float: left;
+  text-align: center;
+  font-size: 3rem;
+  width: 8rem; }
+
+.menuCountBox button {
+  width: 5rem;
+  height: 5rem;
+  float: left;
+  font-size: 3rem;
+  border: transparent;
+  background-color: pink;
+  cursor: pointer;
+  border-radius: 0.6rem; }
+  .menuCountBox button:hover {
+    background-color: #dea7b0;
+    transition: all 0.3s; }
+.menuCountBox div {
+  width: 7.5rem;
+  height: 5rem;
+  float: left;
+  font-size: 3rem; }
+
+.menuOrderList {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  width: 108rem;
+  height: 69.533rem;
+  overflow: hidden; }
+  .menuOrderList li {
+    line-height: 5rem; }
+
+.menuDelete {
+  height: 5rem;
+  border: 0.5rem solid pink;
+  background-color: white;
+  border-radius: 0.6rem;
+  cursor: pointer; }
+  .menuDelete:hover {
+    background-color: #e3cdcd;
+    transition: all 0.3s; }
+
+.titleOne {
+  width: 108rem;
+  height: 26.2rem;
+  font-size: 4.5rem;
+  text-align: center;
+  padding-top: 8rem;
+  font-weight: bold;
+  line-height: 7rem; }
+
+.titleTwo {
+  width: 108rem;
+  height: 9rem;
+  padding-left: 5rem;
+  font-size: 4rem;
+  font-weight: bold; }
+
+footer {
+  width: 108rem;
+  height: 45.4rem;
+  background-color: pink; }
+
+.footerTop {
+  width: 108rem;
+  height: 29.1rem;
+  padding: 7.05rem 15rem 7.05rem 45rem;
+  background-color: pink; }
+
+.allOrder {
+  height: 7.5rem;
+  float: left;
+  font-size: 3.7rem;
+  line-height: 7.5rem; }
+
+.allOrderCounter {
+  width: 20rem;
+  text-align: right;
+  height: 7.5rem;
+  float: left;
+  font-size: 3.7rem;
+  line-height: 7.5rem; }
+
+.allOrderResult {
+  width: 8rem;
+  text-align: right;
+  height: 7.5rem;
+  float: left;
+  font-size: 3.7rem;
+  line-height: 7.5rem; }
+
+.footerBottom {
+  width: 108rem;
+  height: 16.3rem;
+  background-color: pink; }
+
+.footerBtnBox {
+  padding-left: 50rem; }
+
+.footerBtn {
+  width: 19.6rem;
+  height: 9rem;
+  font-size: 3.7rem;
+  font-weight: bold;
+  margin-left: 5rem;
+  border: transparent;
+  line-height: 9rem;
+  text-align: center;
+  float: left;
+  background-color: ivory;
+  cursor: pointer;
+  border-radius: 0.6rem; }
+  .footerBtn:hover {
+    background-color: #ddddd1;
+    transition: all 0.3s; }
+
+.modalBg {
+  width: 108rem;
+  height: 192rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 1; }
+
+.phoneNumberBox {
+  width: 80rem;
+  height: 100rem;
+  background-color: lightgray;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 2; }
+  .phoneNumberBox p {
+    width: 80rem;
+    height: 15.6rem;
+    font-size: 3.1rem;
+    text-align: center;
+    padding-top: 12rem; }
+
+.phoneNumberInput {
+  width: 80rem; }
+  .phoneNumberInput input {
+    width: 51.5rem;
+    height: 7.7rem;
+    margin-top: 4.5rem;
+    background-color: white;
+    margin-left: 14.25rem;
+    margin-bottom: 4.4rem;
+    border: transparent;
+    cursor: pointer;
+    font-size: 4rem;
+    text-align: center; }
+
+.keyPadBox {
+  width: 32.5rem;
+  height: 44rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto; }
+  .keyPadBox .numberPad {
+    width: 9rem;
+    height: 9rem;
+    background-color: white;
+    line-height: 9rem;
+    text-align: center;
+    font-weight: bold;
+    border: transparent;
+    cursor: pointer;
+    font-size: 4.3rem;
+    border-radius: 1rem; }
+    .keyPadBox .numberPad:hover {
+      background-color: #eeebeb;
+      transition: all 0.3s; }
+  .keyPadBox .textPad {
+    width: 9rem;
+    height: 9rem;
+    background-color: white;
+    line-height: 9rem;
+    text-align: center;
+    font-weight: bold;
+    border: transparent;
+    cursor: pointer;
+    font-size: 2.8rem;
+    border-radius: 1rem; }
+    .keyPadBox .textPad:hover {
+      background-color: #eeebeb;
+      transition: all 0.3s; }
+
+.modalButtonBox {
+  display: flex;
+  flex-direction: row;
+  margin-top: 7rem;
+  padding-left: 30rem; }
+
+.phoneNumberBtn {
+  width: 16.9rem;
+  height: 6.2rem;
+  background-color: white;
+  border: transparent;
+  font-weight: bold;
+  margin-left: 4rem;
+  font-size: 3.4rem;
+  border-radius: 0.9rem;
+  cursor: pointer; }
+  .phoneNumberBtn:hover {
+    background-color: #eeebeb;
+    transition: all 0.3s; }
+
+.usePointBox {
+  width: 80rem;
+  height: 100rem;
+  background-color: lightgray;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 2; }
+  .usePointBox .pay {
+    width: 80rem;
+    height: 12.6rem;
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 10rem;
+    font-weight: bold; }
+
+.paymentBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 47.7rem;
+  height: 8rem;
+  margin: 0 auto;
+  margin-top: 5rem; }
+  .paymentBox .resultTextMenu {
+    width: 14rem;
+    height: 4rem;
+    font-size: 2.8rem;
+    font-weight: bold; }
+  .paymentBox .resultNumberMenu {
+    width: 30rem;
+    height: 4rem;
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 3rem; }
+  .paymentBox .price {
+    width: 3.7rem;
+    height: 4rem;
+    font-size: 2.8rem;
+    font-weight: bold; }
+
+.keyPadArea {
+  width: 32.9rem;
+  height: 45.8rem;
+  margin: 3rem 23.35rem 3rem 23.35rem; }
+  .keyPadArea p {
+    width: 15.2rem;
+    height: 3.2rem;
+    margin: 0 auto;
+    font-size: 3rem;
+    font-weight: bold; }
+
+.inputPhoneNumber {
+  display: flex;
+  flex-direction: row;
+  width: 33.9rem;
+  margin-top: 3rem; }
+
+.minusPointDiv {
+  width: 4.3rem;
+  height: 5rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 5rem; }
+
+.numberInputBox {
+  width: 25.4rem;
+  height: 5rem;
+  font-size: 1.8rem;
+  text-align: center;
+  border: transparent; }
+
+.keyPadBox2 {
+  width: 33.9rem;
+  height: 32.7rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  padding-top: 3rem; }
+  .keyPadBox2 .numberPad2 {
+    width: 7rem;
+    height: 7rem;
+    background-color: white;
+    line-height: 7rem;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    border: transparent;
+    font-size: 3rem;
+    border-radius: 1rem; }
+    .keyPadBox2 .numberPad2:hover {
+      background-color: #eeebeb;
+      transition: all 0.3s; }
+  .keyPadBox2 .textPad2 {
+    width: 7rem;
+    height: 7rem;
+    background-color: white;
+    line-height: 7rem;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    border: transparent;
+    font-size: 2rem;
+    border-radius: 1rem; }
+    .keyPadBox2 .textPad2:hover {
+      background-color: #eeebeb;
+      transition: all 0.3s; }
+
+.totalResult {
+  width: 48.9rem;
+  height: 8.2rem;
+  display: flex;
+  flex-direction: row;
+  margin-left: 15rem; }
+  .totalResult div:first-child {
+    width: 15.7rem;
+    height: 8.2rem;
+    line-height: 8.2rem;
+    font-size: 2.5rem; }
+  .totalResult div:nth-child(2) {
+    width: 30.5rem;
+    height: 8.2rem;
+    text-align: right;
+    line-height: 8.2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-right: 3rem; }
+  .totalResult div:nth-child(3) {
+    width: 2.7rem;
+    height: 8.2rem;
+    line-height: 8.2rem;
+    font-size: 2.5rem; }
+
+.totalResultBtnBox {
+  display: flex;
+  flex-direction: row;
+  margin-left: 34rem; }
+  .totalResultBtnBox button {
+    width: 16.9rem;
+    height: 5.7rem;
+    background-color: white;
+    border: transparent;
+    font-weight: bold;
+    margin-right: 5rem;
+    border-radius: 1rem;
+    font-size: 3rem;
+    cursor: pointer; }
+    .totalResultBtnBox button:hover {
+      background-color: #eeebeb;
+      transition: all 0.3s; }
+
+.cardModalBox {
+  width: 80rem;
+  height: 48.6rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 2; }
+  .cardModalBox img {
+    padding-top: 10rem;
+    width: 19.5rem;
+    height: auto;
+    margin-left: 30.25rem; }
+  .cardModalBox div {
+    font-size: 2.1rem;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 3rem;
+    line-height: 3.5rem; }
+  .cardModalBox button {
+    width: 9.2rem;
+    height: 4.4rem;
+    background-color: lightgray;
+    font-weight: bold;
+    margin-top: 5rem;
+    margin-left: 63rem;
+    border: transparent;
+    color: #333;
+    border-radius: 0.7rem;
+    font-size: 2.2rem;
+    cursor: pointer; }
+    .cardModalBox button:hover {
+      background-color: #b9b8b8;
+      transition: all 0.3s; }
+
+.paymentModal {
+  width: 80rem;
+  height: 48.6rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; }
+  .paymentModal i {
+    font-size: 15rem;
+    margin-top: 10.5rem;
+    color: #2560D6; }
+  .paymentModal div {
+    font-size: 2.2rem;
+    line-height: 4.2rem;
+    font-weight: bold;
+    padding-top: 5rem;
+    text-align: center; }
+    .paymentModal div span {
+      font-size: 2.7rem; }
+
+.completeModal {
+  width: 80rem;
+  height: 48.6rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; }
+  .completeModal i {
+    font-size: 8rem;
+    color: lightgray;
+    padding-top: 10rem; }
+  .completeModal .smallFont {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 2rem; }
+  .completeModal .bigFont {
+    float: left;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-top: 5rem; }
+  .completeModal .completeModalBtn {
+    width: 9.2rem;
+    height: 4.4rem;
+    background-color: lightgray;
+    font-weight: bold;
+    border: transparent;
+    color: black;
+    border-radius: 0.7rem;
+    font-size: 1.5rem;
+    cursor: pointer; }
+    .completeModal .completeModalBtn:hover {
+      background-color: #b1b1b1;
+      transition: all 0.3s; }
+
+.completeModalBtnBox {
+  padding-top: 8rem;
+  padding-left: 40rem; }
+  .completeModalBtnBox form {
+    float: left;
+    width: 9.2rem;
+    height: 4.4rem;
+    margin-right: 3rem; }
+
+.alertModalBg {
+  width: 108rem;
+  height: 192rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 3; }
+  .alertModalBg .alertModal {
+    width: 80rem;
+    height: 48.6rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4; }
+    .alertModalBg .alertModal .alertModalContent {
+      width: 100%;
+      height: 25.6rem;
+      line-height: 25.6rem;
+      margin-top: 10rem;
+      text-align: center;
+      font-size: 3.8rem;
+      font-weight: bold; }
+    .alertModalBg .alertModal .alertModalBtn {
+      width: 15rem;
+      height: 6rem;
+      font-size: 3rem;
+      font-weight: bold;
+      border: transparent;
+      border-radius: 1rem;
+      background-color: lightgray;
+      cursor: pointer; }
+      .alertModalBg .alertModal .alertModalBtn:hover {
+        background-color: #bbbaba; }
+
+/*# sourceMappingURL=payment.css.map */

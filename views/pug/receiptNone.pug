@@ -1,0 +1,51 @@
+doctype html
+html(lang="ko")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="Cache-Control", content="no-cache")
+    meta(http-equiv="Pragma", content="no-chche")
+    meta(http-equiv="build", content="2023, 03, 29")
+    meta(http-equiv="Copyright", content="c17team03_oh_hye_rim")
+    meta(http-equiv="Distribution", content="OH_HRE_RIM")
+    meta(http-equiv="Filename", content="payment.pug")
+    meta(name="robots", content="noindex, nofollow, noarchive")
+    link(rel="stylesheet", href="./css/receipt.css")
+    link(rel="icon", type="icon", href="./img/favicon.ico")
+    script(
+      src="https://code.jquery.com/jquery-3.6.4.min.js",
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=",
+      crossorigin="anonymous"
+    )
+    script(src="https://unpkg.com/adorable-css", defer)
+    script(src="./js/receipt.js", defer, type="text/javascript")
+    script(src="./js/print.js")
+    link(rel="stylesheet", href="./css/print.css")
+    title 돈돈정 - 맛있는 가정식 요리와 일본의 명주
+  body
+    form(action="/", method="get", class="display(none)")
+      input#submitInput(type="submit", value="")
+    .countBox#countBox 10초 후 종료됩니다.
+    .blurBox
+      section.receiptAllBox#tabsPrintArea
+        header#printArea
+          section.receiptTopBox
+            p.r_orderNumber 주문 번호
+            p #{ orderInfo.orderNumber }
+          section.addressBox
+            address
+              .addressTitle
+                p 가맹점명 :
+                p 대표자명 :
+                p 사업자 번호 :
+                p 전화번호 :
+                p 주소 :
+              .addressText
+                p DonDonJung Line점
+                p LINE
+                p 1234-1234-1234-1234
+                p 010-1234-5678
+                p 안산시 단원구 _____
+          p.thankYouText 감사합니다
+    button#printBtn PRINT

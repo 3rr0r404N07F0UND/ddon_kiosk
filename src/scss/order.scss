@@ -1,0 +1,418 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "KCC-Ganpan";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  color: #333;
+  box-sizing: border-box;
+  font-family: "Nanum Gothic", sans-serif;
+}
+@mixin textOption {
+  font-weight: bold;
+  text-align: center;
+}
+.displayNone {
+  display: none;
+}
+.hoverEffect {
+  &:hover {
+    cursor: pointer;
+  }
+}
+.pointFont {
+  font-family: "KCC-Ganpan" !important;
+}
+.totalWrapBox {
+  width: 108rem;
+  height: 192rem;
+  background-image: url("../../static/img/backgroundImage.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  position: relative;
+}
+.headerBox {
+  width: 108rem;
+  height: 35rem;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  .topFlowerImage,
+  .ddjMark,
+  .ddjCenterMark,
+  .sideFlowerImage {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+  }
+  .topFlowerImage {
+    width: 85rem;
+    height: 18rem;
+    background-image: url("../../static/img/topFlowerImage.png");
+  }
+  .ddjMark {
+    width: 14rem;
+    height: 12rem;
+    top: 4rem;
+    left: 4rem;
+    background-image: url("../../static/img/ddjMark.png");
+  }
+  .ddjCenterMark {
+    width: 31rem;
+    height: 12rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../../static/img/ddjCenterMark.png");
+  }
+  .sideFlowerImage {
+    width: 46rem;
+    height: 26rem;
+    left: 62%;
+    top: 20%;
+    transform: scaleX(-1);
+    background-image: url("../../static/img/sideFlowerImage.png");
+  }
+}
+.sideMenu {
+  width: 19rem;
+  height: 118rem;
+  margin: 0 1rem;
+  float: left;
+  .sideMenuTop {
+    @include textOption;
+    width: 19rem;
+    height: 9rem;
+    margin-top: -9rem;
+    background-color: #f088a6;
+    color: #eee;
+    line-height: 10rem;
+    font-size: 4rem;
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+  }
+  .sideMenuMainWrap {
+    width: 19rem;
+    height: 119rem;
+    background-color: #ffdcdc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    .maindishTab,
+    .noodleTab,
+    .singleMenuTab,
+    .sodaTab,
+    .alcoholTab {
+      width: 15rem;
+      height: 20rem;
+      transform: scale(1);
+      transition: transform 0.5s;
+      .maindishImage,
+      .noodleImage,
+      .singleImage,
+      .sodaImage,
+      .alcoholImage {
+        width: 15rem;
+        height: 14rem;
+        background-size: cover;
+        background-position: center;
+      }
+      .maindishImage {
+        background-image: url("../../static/img/maindish.png");
+      }
+      .noodleImage {
+        background-image: url("../../static/img/noodle.png");
+      }
+      .singleImage {
+        background-image: url("../../static/img/single.png");
+      }
+      .sodaImage {
+        background-image: url("../../static/img/soda.png");
+      }
+      .alcoholImage {
+        background-image: url("../../static/img/alcohol.png");
+      }
+      .sideTabName {
+        width: 15rem;
+        height: 6rem;
+        font-size: 3rem;
+        line-height: 6rem;
+        @include textOption;
+      }
+    }
+  }
+}
+.sideMenu:after {
+  clear: both;
+}
+.mainMenuSection {
+  width: 86rem;
+  height: 119rem;
+  background-color: #fffbf3;
+  float: left;
+  border-radius: 3rem;
+  .mainMenuWrap {
+    width: 86rem;
+    height: 109rem;
+    margin-right: 1rem;
+    padding: 7rem 6rem 0 6rem;
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-content: flex-start;
+    .selectFoodBox {
+      width: 34rem;
+      height: 27rem;
+      background-color: skyblue;
+      .foodImage {
+        width: 34rem;
+        height: 19rem;
+        background-color: red;
+      }
+      .foodName,
+      .foodPrice {
+        @include textOption;
+        height: 4rem;
+        line-height: 4rem;
+        font-size: 2rem;
+      }
+    }
+    .selectFoodBox:nth-child(2n-1) {
+      margin-right: 6rem;
+      margin-bottom: 7rem;
+    }
+  }
+  .mainMenuWrapOn {
+    display: flex;
+  }
+  .mainMenuNav {
+    width: 86rem;
+    height: 10rem;
+    .mainMenuLeftBt,
+    .mainMenuRightBt {
+      @include textOption;
+      width: 20rem;
+      height: 10rem;
+      background: #e2b9b7;
+      float: left;
+      line-height: 10rem;
+      font-size: 5rem;
+      border-radius: 3rem;
+    }
+    .mainMenuPositionBar {
+      width: 46rem;
+      height: 10rem;
+      line-height: 10rem;
+      float: left;
+      text-align: center;
+      .mainMenuPositionCircle,
+      .mainMenuPositionCircleOn {
+        width: 3rem;
+        height: 3rem;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: #333;
+        margin: 0 1rem;
+      }
+      .mainMenuPositionCircleOn {
+        background-color: #333;
+      }
+    }
+  }
+  .mainMenuSection:after {
+    clear: both;
+  }
+}
+.priceCalculateWrap {
+  width: 106rem;
+  height: 36rem;
+  float: left;
+  margin: 1rem;
+  .calculateTop {
+    width: 106rem;
+    height: 8rem;
+    background-color: #d4e0ee;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    .totalSelectTitle,
+    .totalPrice,
+    .totalPriceResult {
+      width: 15rem;
+      height: 8rem;
+      display: block;
+      @include textOption;
+      line-height: 8rem;
+      font-size: 3rem;
+      float: left;
+    }
+    .totalPrice {
+      float: right;
+    }
+    .totalPriceResult {
+      width: 25rem;
+      float: right;
+    }
+  }
+  .calculateMiddle {
+    width: 106rem;
+    height: 20rem;
+    background-color: #fffbf3;
+    padding: 1rem;
+    ul li {
+      list-style: none;
+      .orderMenuNum,
+      .orderMenuName,
+      .orderMenuPlusOrMinus,
+      .orderMenuPrice,
+      .orderMenuDelete {
+        display: inline-block;
+        height: 6rem;
+        line-height: 6rem;
+        font-size: 3rem;
+      }
+      .orderMenuNum {
+        width: 5rem;
+        margin-right: 2rem;
+      }
+      .orderMenuName {
+        width: 30rem;
+        margin-right: 9rem;
+      }
+      .orderMenuPlusOrMinus {
+        width: 7rem;
+        margin-right: 11rem;
+      }
+      .orderMenuPrice {
+        width: 14rem;
+        margin-right: 16rem;
+      }
+      .orderMenuDelete {
+        width: 7rem;
+      }
+    }
+  }
+  .calculateBottom {
+    width: 106rem;
+    height: 8rem;
+    background-color: #d4e0ee;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    .resetBt,
+    .orderBt {
+      width: 33rem;
+      height: 8rem;
+      line-height: 8rem;
+      display: inline-block;
+      @include textOption;
+      font-size: 3rem;
+    }
+  }
+}
+.modalOnBackground {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  background-color: rgba(3, 3, 3, 0.4);
+  z-index: 1;
+}
+.selectPage {
+  width: 80rem;
+  height: 100rem;
+  background-color: #ffdcdc;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: none;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 4rem;
+  border-radius: 3rem;
+  .selectPageTop {
+    width: 72rem;
+    height: 36rem;
+    padding: 4rem;
+    border-radius: 3rem;
+    background-color: #fffbf3;
+    .selectPageMark {
+      width: 20rem;
+      height: 9rem;
+      transform: translate(-15%, -25%);
+      position: absolute;
+      background-image: url("../../static/img/ddjCenterMark.png");
+      background-size: cover;
+      background-position: center;
+    }
+    .selectMenuImageBox {
+      width: 34rem;
+      height: 19rem;
+      margin: 7rem 2rem 0 -1rem;
+      float: left;
+      display: block;
+      background: gray;
+    }
+    .selectMenuName,
+    .selectMenuPrice {
+      width: 29rem;
+      height: 6rem;
+      display: inline-block;
+      line-height: 6rem;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .selectMenuName {
+      margin-top: 10rem;
+    }
+  }
+  .selectPageMiddle {
+    width: 72rem;
+    height: 36rem;
+    padding: 5rem;
+    background-color: #fffbf3;
+    margin: 3rem 0 4rem 0;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .selectMenuDescBox,
+    .selectMenuFoodInfoBox,
+    .selectMenuAllergyInfoBox {
+      width: 62rem;
+      height: 6rem;
+      line-height: 6rem;
+      font-size: 2rem;
+    }
+  }
+  .selectPageBottom {
+    width: 72rem;
+    height: 13rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .cansleBt,
+    .acceptBt {
+      width: 35rem;
+      height: 13rem;
+      line-height: 13rem;
+      @include textOption;
+      font-size: 4rem;
+      border-radius: 3rem;
+      background-color: #fffbf3;
+    }
+  }
+}

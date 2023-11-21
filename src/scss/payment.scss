@@ -1,0 +1,669 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "KCC-Ganpan";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  box-sizing: border-box;
+  font-family: "Nanum Gothic", sans-serif;
+  list-style: none;
+  color: #333;
+}
+.fontBold{
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  color: #333;
+}
+.pointFont {
+  font-family: "KCC-Ganpan" !important;
+}
+.allBox {
+  width: 108rem;
+  height: 192rem;
+  margin: auto;
+  background-color: ivory;
+  position: relative;
+}
+header {
+  width: 108rem;
+  height: 27.8rem;
+  padding: 5.1rem 31.7rem 5.1rem 7rem;
+  background-color: pink;
+  section {
+    width: 68.9rem;
+    height: 17.6rem;
+    display: flex;
+    flex-direction: row;
+    .titleLeft {
+      width: 24.6rem;
+      height: 17.8rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      a {
+        i {
+          font-size: 8rem;
+        }
+        span {
+          font-size: 5rem;
+        }
+      }
+    }
+    .titleRight {
+      width: 44.3rem;
+      height: 17.8rem;
+      padding-left: 8rem;
+      padding-top: 3rem;
+      img {
+        width: auto;
+        height: 13rem;
+      }
+    }
+  }
+}
+.paymentMain {
+  width: 108rem;
+  height: 119rem;
+  display: flex;
+  flex-direction: column;
+  hr {
+    color: #666;
+    width: 98rem;
+    margin-left: 5rem;
+  }
+}
+.menuBox{
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 4rem;
+}
+.menuMiniBox{
+  font-weight: bold;
+}
+@mixin menuMiniBox{
+  height: 10rem;
+  float: left;
+  text-align: center;
+  font-size: 3rem;
+}
+.menuMiniBox:first-child, .menuNum{
+  @include menuMiniBox;
+  width: 11rem;
+}
+.menuMiniBox:nth-child(2), .menuName{
+  @include menuMiniBox;
+  width: 36.4rem;
+}
+.menuMiniBox:nth-child(3), .menuCountBox{
+  @include menuMiniBox;
+  width: 17.5rem;
+}
+.menuMiniBox:nth-child(4), .menuAmount{
+  @include menuMiniBox;
+  width: 23.4rem;
+}
+.menuMiniBox:nth-child(5), .menuDelete{
+  @include menuMiniBox;
+  width: 8rem;
+}
+.menuCountBox{
+  button{
+    width: 5rem;
+    height: 5rem;
+    float: left;
+    font-size: 3rem;
+    border: transparent;
+    background-color: pink;
+    cursor: pointer;
+    border-radius: 0.6rem;
+    &:hover{
+      background-color: rgb(222, 167, 176);
+      transition: all 0.3s;
+    }
+  }
+  div{
+    width: 7.5rem;
+    height: 5rem;
+    float: left;
+    font-size: 3rem;
+  }
+}
+.menuOrderList{
+  padding-left: 5rem;
+  padding-right: 5rem;
+  width: 108rem;
+  height: 69.533rem;
+  overflow: hidden; 
+  li{
+    line-height: 5rem;
+  }
+}
+.menuDelete{
+  height: 5rem;
+  border: 0.5rem solid pink;
+  background-color: white;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  &:hover{
+    background-color: rgb(227, 205, 205);
+    transition: all 0.3s;
+  }
+}
+.titleOne {
+  width: 108rem;
+  height: 26.2rem;
+  font-size: 4.5rem;
+  text-align: center;
+  padding-top: 8rem;
+  font-weight: bold;
+  line-height: 7rem;
+}
+.titleTwo {
+  width: 108rem;
+  height: 9rem;
+  padding-left: 5rem;
+  font-size: 4rem;
+  font-weight: bold;
+}
+footer {
+  width: 108rem;
+  height: 45.4rem;
+  background-color: pink;
+}
+.footerTop{
+  width: 108rem;
+  height: 29.1rem;
+  padding: 7.05rem 15rem 7.05rem 45rem;
+  background-color: pink; 
+}
+@mixin footerTop{
+  height: 7.5rem;
+  float: left;
+  font-size: 3.7rem;
+  line-height: 7.5rem;
+}
+.allOrder{
+  @include footerTop;
+}
+.allOrderCounter{
+  width: 20rem;
+  text-align: right;
+  @include footerTop;
+}
+.allOrderResult{
+  width: 8rem;
+  text-align: right;
+  @include footerTop;
+}
+.footerBottom{
+  width: 108rem;
+  height: 16.3rem;
+  background-color: pink;
+}
+.footerBtnBox{
+  padding-left: 50rem;
+}
+.footerBtn{
+  width: 19.6rem;
+  height: 9rem;
+  font-size: 3.7rem;
+  font-weight: bold;
+  margin-left: 5rem;
+  border: transparent;
+  line-height: 9rem;
+  text-align: center;
+  float: left;
+  background-color: ivory;
+  cursor: pointer;
+  border-radius: 0.6rem;
+  &:hover{
+    background-color: rgb(221, 221, 209);
+    transition: all 0.3s;
+  }
+}
+//모달 배경
+.modalBg{
+  width: 108rem;
+  height: 192rem;
+  background-color: rgba(0,0,0,0.7);
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index:1;
+}
+//포인트 적립한 번호 입력 모달
+.phoneNumberBox{
+  width: 80rem;
+  height: 100rem;
+  background-color: lightgray;
+  margin: auto;
+  position: absolute;
+  top: 50%; left:50%;
+  transform: translate(-50%,-50%);
+  display: none; 
+  z-index: 2;
+  p{
+    width: 80rem;
+    height: 15.6rem;
+    font-size: 3.1rem;
+    text-align: center;
+    padding-top: 12rem;
+  }
+}
+.phoneNumberInput{
+  width: 80rem;
+  input{
+    width: 51.5rem;
+    height: 7.7rem;
+    margin-top: 4.5rem;
+    background-color: white;
+    margin-left: 14.25rem;
+    margin-bottom: 4.4rem;
+    border: transparent;
+    cursor:pointer;
+    font-size: 4rem;
+    text-align:center;
+  }
+}
+@mixin keyPadMiniBox{
+  width: 9rem;
+  height: 9rem;
+  background-color: white;
+  line-height: 9rem;
+  text-align: center;
+  font-weight: bold;
+  border: transparent;
+  cursor: pointer;
+  &:hover{
+    background-color: rgb(238, 235, 235);
+    transition: all 0.3s;
+  }
+}
+.keyPadBox{
+  width: 32.5rem;
+  height: 44rem;
+  display:flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  .numberPad{
+    @include keyPadMiniBox;
+    font-size: 4.3rem;
+    border-radius: 1rem;
+  }
+  .textPad{
+    @include keyPadMiniBox;
+    font-size: 2.8rem;
+    border-radius: 1rem;
+  }
+}
+.modalButtonBox{
+  display: flex;
+  flex-direction: row;
+  margin-top: 7rem;
+  padding-left: 30rem;
+}
+.phoneNumberBtn{
+  width: 16.9rem;
+  height: 6.2rem;
+  background-color: white;
+  border: transparent;
+  font-weight: bold;
+  margin-left: 4rem;
+  font-size: 3.4rem;
+  border-radius: 0.9rem;
+  cursor: pointer;
+  &:hover{
+    background-color: rgb(238, 235, 235);
+    transition: all 0.3s;
+  }
+}
+// 포인트 사용 모달
+.usePointBox{
+  width: 80rem;
+  height: 100rem;
+  background-color: lightgray;
+  margin: auto; 
+  position: absolute;
+  top: 50%; left:50%;
+  transform: translate(-50%,-50%);
+  display: none;
+  z-index: 2;
+  .pay{
+    width: 80rem;
+    height: 12.6rem;
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 10rem;
+    font-weight: bold;
+  }
+}
+.paymentBox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 47.7rem;
+  height: 8rem;
+  margin:0 auto;
+  margin-top: 5rem;
+  .resultTextMenu{
+    width: 14rem;
+    height: 4rem;
+    font-size: 2.8rem;
+    font-weight: bold;
+  }
+  .resultNumberMenu{
+    width: 30rem;
+    height: 4rem;
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 3rem;
+  }
+  .price{
+    width: 3.7rem;
+    height: 4rem;
+    font-size: 2.8rem;
+    font-weight: bold;
+  }
+}
+.keyPadArea{
+  width: 32.9rem;
+  height: 45.8rem;
+  margin: 3rem 23.35rem 3rem 23.35rem; 
+  p {
+    width: 15.2rem;
+    height: 3.2rem;
+    margin: 0 auto;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+}
+.inputPhoneNumber{
+  display: flex;
+  flex-direction: row;
+  width: 33.9rem;
+  margin-top: 3rem;
+}
+.minusPointDiv{
+  width: 4.3rem;
+  height: 5rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 5rem;
+}
+.numberInputBox{
+  width: 25.4rem;
+  height: 5rem;
+  font-size: 1.8rem;
+  text-align: center;
+  border: transparent;
+}
+@mixin keyPadMiniBox2{
+  width: 7rem;
+  height: 7rem;
+  background-color: white;
+  line-height: 7rem;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  border: transparent;
+  &:hover{
+    background-color: rgb(238, 235, 235);
+    transition: all 0.3s;
+  }
+}
+.keyPadBox2{
+  width: 33.9rem;
+  height: 32.7rem;
+  display:flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  padding-top: 3rem;
+  .numberPad2{
+    @include keyPadMiniBox2;
+    font-size: 3rem;
+    border-radius: 1rem;
+  }
+  .textPad2{
+    @include keyPadMiniBox2;
+    font-size: 2rem;
+    border-radius: 1rem;
+  }
+}
+.totalResult{
+  width: 48.9rem;
+  height: 8.2rem;
+  display: flex;
+  flex-direction: row;
+  margin-left: 15rem;
+  div:first-child{
+    width: 15.7rem;
+    height: 8.2rem;
+    line-height: 8.2rem;
+    font-size: 2.5rem;
+  }
+  div:nth-child(2){
+    width: 30.5rem;
+    height: 8.2rem;
+    text-align: right;
+    line-height: 8.2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-right: 3rem;
+  }
+  div:nth-child(3){
+    width: 2.7rem;
+    height: 8.2rem;
+    line-height: 8.2rem;
+    font-size: 2.5rem;
+  }
+}
+.totalResultBtnBox{
+  display: flex;
+  flex-direction: row;
+  margin-left: 34rem;
+  button{
+    width: 16.9rem;
+    height: 5.7rem;
+    background-color: white;
+    border: transparent;
+    font-weight: bold;
+    margin-right: 5rem;
+    border-radius: 1rem;
+    font-size: 3rem;
+    cursor: pointer;
+    &:hover{
+      background-color: rgb(238, 235, 235);
+      transition: all 0.3s;
+    }
+  }
+}
+// 카드 결제 모달
+.cardModalBox{
+  width: 80rem;
+  height: 48.6rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%; left:50%;
+  transform: translate(-50%,-50%);
+  display: none;
+  z-index: 2;
+  img{
+    padding-top: 10rem;
+    width: 19.5rem;
+    height: auto;
+    margin-left: 30.25rem;
+  }
+  div{
+    font-size: 2.1rem;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 3rem;
+    line-height: 3.5rem;
+  }
+  button{
+    width: 9.2rem;
+    height: 4.4rem;
+    background-color: lightgray;
+    font-weight: bold;
+    margin-top: 5rem;
+    margin-left: 63rem;
+    border: transparent;
+    color: #333;
+    border-radius: 0.7rem;
+    font-size: 2.2rem;
+    cursor: pointer;
+    &:hover{
+      background-color: rgb(185, 184, 184);
+      transition: all 0.3s;
+    }
+  }
+}
+//결제 진행중 모달
+.paymentModal{
+  width: 80rem;
+  height: 48.6rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  display: none;
+  top: 50%; left:50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  i{
+    font-size: 15rem;
+    margin-top: 10.5rem;
+    color: #2560D6;
+  }
+  div{
+    font-size: 2.2rem;
+    line-height: 4.2rem;
+    font-weight: bold;
+    padding-top: 5rem;
+    text-align: center;
+    span{
+      font-size: 2.7rem;
+    }
+  }
+}
+// 결제 완료 모달
+.completeModal{
+  width: 80rem;
+  height: 48.6rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  display: none;
+  top: 50%; left:50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  i{
+    font-size: 8rem;
+    color: lightgray;
+    padding-top: 10rem;
+  }
+  .smallFont{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 2rem;
+  }
+  .bigFont{
+    float:left;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-top: 5rem;
+  }
+  .completeModalBtn{
+    width: 9.2rem;
+    height: 4.4rem;
+    background-color: lightgray;
+    font-weight: bold;
+    border: transparent;
+    color: black;
+    border-radius: 0.7rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    &:hover{
+      background-color: rgb(177, 177, 177);
+      transition: all 0.3s;
+    }
+  }
+}
+.completeModalBtnBox{
+  padding-top: 8rem;
+  padding-left: 40rem;
+  form{
+    float: left;
+    width: 9.2rem;
+    height: 4.4rem;
+    margin-right: 3rem;
+  }
+}
+.alertModalBg{
+  width: 108rem;
+  height: 192rem;
+  background-color: rgba(0,0,0,0.7);
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index:3;
+  .alertModal{
+    width: 80rem;
+    height: 48.6rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    top: 50%; left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 4;
+    .alertModalContent{
+      width: 100%;
+      height: 25.6rem;
+      line-height: 25.6rem;
+      margin-top: 10rem;
+      text-align: center;
+      font-size: 3.8rem;
+      font-weight: bold;
+    }
+    .alertModalBtn{
+      width: 15rem;
+      height: 6rem;
+      font-size: 3rem;
+      font-weight: bold;
+      border: transparent;
+      border-radius: 1rem;
+      background-color: lightgray;
+      cursor: pointer;
+      &:hover{
+        background-color: rgb(187, 186, 186);
+      }
+    }
+  }
+}

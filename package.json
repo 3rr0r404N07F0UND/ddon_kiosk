@@ -1,0 +1,23 @@
+{
+  "name": "kiosk_project",
+  "version": "1.0.0",
+  "description": "![1679959286079](image/README/1679959286079.png)",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd web && pm2 start index.js --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "print-js": "^1.6.0",
+    "pug": "^3.0.2",
+    "supervisor": "^0.12.0"
+  }
+}

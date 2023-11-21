@@ -1,0 +1,470 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+@font-face {
+  font-family: "KCC-Ganpan";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  color: #333;
+  box-sizing: border-box;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.hoverEffect:hover {
+  cursor: pointer;
+}
+
+.pointFont {
+  font-family: "KCC-Ganpan" !important;
+}
+
+.totalWrapBox {
+  width: 108rem;
+  height: 192rem;
+  background-image: url("../img/backgroundImage.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  position: relative;
+}
+
+.headerBox {
+  width: 108rem;
+  height: 35rem;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+.headerBox .topFlowerImage,
+.headerBox .ddjMark,
+.headerBox .ddjCenterMark,
+.headerBox .sideFlowerImage {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+}
+.headerBox .topFlowerImage {
+  width: 85rem;
+  height: 18rem;
+  background-image: url("../img/topFlowerImage.png");
+}
+.headerBox .ddjMark {
+  width: 14rem;
+  height: 12rem;
+  top: 4rem;
+  left: 4rem;
+  background-image: url("../img/ddjMark.png");
+}
+.headerBox .ddjCenterMark {
+  width: 31rem;
+  height: 12rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/ddjCenterMark.png");
+}
+.headerBox .sideFlowerImage {
+  width: 46rem;
+  height: 26rem;
+  left: 62%;
+  top: 20%;
+  transform: scaleX(-1);
+  background-image: url("../img/sideFlowerImage.png");
+}
+
+.sideMenu {
+  width: 19rem;
+  height: 118rem;
+  margin: 0 1rem;
+  float: left;
+}
+.sideMenu .sideMenuTop {
+  font-weight: bold;
+  text-align: center;
+  width: 19rem;
+  height: 9rem;
+  margin-top: -9rem;
+  background-color: #f088a6;
+  color: #eee;
+  line-height: 10rem;
+  font-size: 4rem;
+  border-top-right-radius: 3rem;
+  border-top-left-radius: 3rem;
+}
+.sideMenu .sideMenuMainWrap {
+  width: 19rem;
+  height: 119rem;
+  background-color: #ffdcdc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+}
+.sideMenu .sideMenuMainWrap .maindishTab,
+.sideMenu .sideMenuMainWrap .noodleTab,
+.sideMenu .sideMenuMainWrap .singleMenuTab,
+.sideMenu .sideMenuMainWrap .sodaTab,
+.sideMenu .sideMenuMainWrap .alcoholTab {
+  width: 15rem;
+  height: 20rem;
+}
+.sideMenu .sideMenuMainWrap .maindishTab .maindishImage,
+.sideMenu .sideMenuMainWrap .maindishTab .noodleImage,
+.sideMenu .sideMenuMainWrap .maindishTab .singleImage,
+.sideMenu .sideMenuMainWrap .maindishTab .sodaImage,
+.sideMenu .sideMenuMainWrap .maindishTab .alcoholImage,
+.sideMenu .sideMenuMainWrap .noodleTab .maindishImage,
+.sideMenu .sideMenuMainWrap .noodleTab .noodleImage,
+.sideMenu .sideMenuMainWrap .noodleTab .singleImage,
+.sideMenu .sideMenuMainWrap .noodleTab .sodaImage,
+.sideMenu .sideMenuMainWrap .noodleTab .alcoholImage,
+.sideMenu .sideMenuMainWrap .singleMenuTab .maindishImage,
+.sideMenu .sideMenuMainWrap .singleMenuTab .noodleImage,
+.sideMenu .sideMenuMainWrap .singleMenuTab .singleImage,
+.sideMenu .sideMenuMainWrap .singleMenuTab .sodaImage,
+.sideMenu .sideMenuMainWrap .singleMenuTab .alcoholImage,
+.sideMenu .sideMenuMainWrap .sodaTab .maindishImage,
+.sideMenu .sideMenuMainWrap .sodaTab .noodleImage,
+.sideMenu .sideMenuMainWrap .sodaTab .singleImage,
+.sideMenu .sideMenuMainWrap .sodaTab .sodaImage,
+.sideMenu .sideMenuMainWrap .sodaTab .alcoholImage,
+.sideMenu .sideMenuMainWrap .alcoholTab .maindishImage,
+.sideMenu .sideMenuMainWrap .alcoholTab .noodleImage,
+.sideMenu .sideMenuMainWrap .alcoholTab .singleImage,
+.sideMenu .sideMenuMainWrap .alcoholTab .sodaImage,
+.sideMenu .sideMenuMainWrap .alcoholTab .alcoholImage {
+  width: 15rem;
+  height: 14rem;
+  background-size: cover;
+  background-position: center;
+}
+.sideMenu .sideMenuMainWrap .maindishTab .maindishImage,
+.sideMenu .sideMenuMainWrap .noodleTab .maindishImage,
+.sideMenu .sideMenuMainWrap .singleMenuTab .maindishImage,
+.sideMenu .sideMenuMainWrap .sodaTab .maindishImage,
+.sideMenu .sideMenuMainWrap .alcoholTab .maindishImage {
+  background-image: url("../img/maindish.png");
+}
+.sideMenu .sideMenuMainWrap .maindishTab .noodleImage,
+.sideMenu .sideMenuMainWrap .noodleTab .noodleImage,
+.sideMenu .sideMenuMainWrap .singleMenuTab .noodleImage,
+.sideMenu .sideMenuMainWrap .sodaTab .noodleImage,
+.sideMenu .sideMenuMainWrap .alcoholTab .noodleImage {
+  background-image: url("../img/noodle.png");
+}
+.sideMenu .sideMenuMainWrap .maindishTab .singleImage,
+.sideMenu .sideMenuMainWrap .noodleTab .singleImage,
+.sideMenu .sideMenuMainWrap .singleMenuTab .singleImage,
+.sideMenu .sideMenuMainWrap .sodaTab .singleImage,
+.sideMenu .sideMenuMainWrap .alcoholTab .singleImage {
+  background-image: url("../img/single.png");
+}
+.sideMenu .sideMenuMainWrap .maindishTab .sodaImage,
+.sideMenu .sideMenuMainWrap .noodleTab .sodaImage,
+.sideMenu .sideMenuMainWrap .singleMenuTab .sodaImage,
+.sideMenu .sideMenuMainWrap .sodaTab .sodaImage,
+.sideMenu .sideMenuMainWrap .alcoholTab .sodaImage {
+  background-image: url("../img/soda.png");
+}
+.sideMenu .sideMenuMainWrap .maindishTab .alcoholImage,
+.sideMenu .sideMenuMainWrap .noodleTab .alcoholImage,
+.sideMenu .sideMenuMainWrap .singleMenuTab .alcoholImage,
+.sideMenu .sideMenuMainWrap .sodaTab .alcoholImage,
+.sideMenu .sideMenuMainWrap .alcoholTab .alcoholImage {
+  background-image: url("../img/alcohol.png");
+}
+.sideMenu .sideMenuMainWrap .maindishTab .sideTabName,
+.sideMenu .sideMenuMainWrap .noodleTab .sideTabName,
+.sideMenu .sideMenuMainWrap .singleMenuTab .sideTabName,
+.sideMenu .sideMenuMainWrap .sodaTab .sideTabName,
+.sideMenu .sideMenuMainWrap .alcoholTab .sideTabName {
+  width: 15rem;
+  height: 6rem;
+  font-size: 3rem;
+  line-height: 6rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sideMenu:after {
+  clear: both;
+}
+
+.mainMenuSection {
+  width: 86rem;
+  height: 119rem;
+  background-color: #fffbf3;
+  float: left;
+  border-radius: 3rem;
+}
+.mainMenuSection .mainMenuWrap {
+  width: 86rem;
+  height: 109rem;
+  margin-right: 1rem;
+  padding-top: 1rem;
+  overflow-x: hidden;
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-content: flex-start;
+}
+.mainMenuSection .mainMenuWrapOn {
+  display: flex;
+}
+.mainMenuSection .mainMenuWrap .selectFoodBox {
+  width: 43rem;
+  height: 36rem;
+  padding: 4rem 4rem 3rem 4rem;
+}
+.mainMenuSection .mainMenuWrap .selectFoodBox .foodImage {
+  width: 35rem;
+  height: 21rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.mainMenuSection .mainMenuWrap .selectFoodBox .foodName,
+.mainMenuSection .mainMenuWrap .selectFoodBox .foodPrice {
+  font-weight: bold;
+  text-align: center;
+  height: 4rem;
+  line-height: 4rem;
+  font-size: 2rem;
+}
+/*.mainMenuSection .mainMenuWrap .selectFoodBox:nth-child(6n-1) {
+}*/
+.mainMenuSection .mainMenuNav {
+  width: 86rem;
+  height: 10rem;
+}
+.mainMenuSection .mainMenuNav .mainMenuLeftBt,
+.mainMenuSection .mainMenuNav .mainMenuRightBt {
+  font-weight: bold;
+  text-align: center;
+  width: 20rem;
+  height: 10rem;
+  background: #e2b9b7;
+  float: left;
+  line-height: 10rem;
+  font-size: 5rem;
+  border-radius: 3rem;
+  outline: none;
+  border: 0;
+}
+.mainMenuSection .mainMenuNav .mainMenuPositionBar {
+  width: 46rem;
+  height: 10rem;
+  line-height: 10rem;
+  float: left;
+  text-align: center;
+}
+.mainMenuSection .mainMenuNav .mainMenuPositionBar .mainMenuPositionCircle,
+.mainMenuSection .mainMenuNav .mainMenuPositionBar .mainMenuPositionCircleOn {
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #333;
+  margin: 0 1rem;
+}
+.mainMenuSection .mainMenuNav .mainMenuPositionBar .mainMenuPostionCircleOn {
+  background-color: #333;
+}
+.mainMenuSection .maindishSection:after {
+  clear: both;
+}
+
+.priceCalculateWrap {
+  width: 106rem;
+  height: 36rem;
+  float: left;
+  margin: 1rem;
+}
+.priceCalculateWrap .calculateTop {
+  width: 106rem;
+  height: 8rem;
+  background-color: #d4e0ee;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+}
+.priceCalculateWrap .calculateTop .totalSelectTitle,
+.priceCalculateWrap .calculateTop .totalPrice,
+.priceCalculateWrap .calculateTop .totalPriceResult {
+  width: 15rem;
+  height: 8rem;
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  line-height: 8rem;
+  font-size: 3rem;
+  float: left;
+}
+.priceCalculateWrap .calculateTop .totalPrice {
+  float: right;
+}
+.priceCalculateWrap .calculateTop .totalPriceResult {
+  width: 25rem;
+  float: right;
+}
+.priceCalculateWrap .calculateMiddle {
+  width: 106rem;
+  height: 20rem;
+  background-color: #fffbf3;
+  padding: 1rem;
+}
+.priceCalculateWrap .calculateMiddle ul li {
+  list-style: none;
+}
+.priceCalculateWrap .calculateMiddle ul li .orderMenuNum,
+.priceCalculateWrap .calculateMiddle ul li .orderMenuName,
+.priceCalculateWrap .calculateMiddle ul li .orderMenuPlusOrMinus,
+.priceCalculateWrap .calculateMiddle ul li .orderMenuPrice,
+.priceCalculateWrap .calculateMiddle ul li .orderMenuDelete {
+  display: inline-block;
+  height: 6rem;
+  line-height: 6rem;
+  font-size: 3rem;
+}
+.priceCalculateWrap .calculateMiddle ul li .orderMenuNum {
+  width: 5rem;
+  margin-right: 2rem;
+}
+.priceCalculateWrap .calculateMiddle ul li .orderMenuName {
+  width: 30rem;
+  margin-right: 9rem;
+}
+.priceCalculateWrap .calculateMiddle ul li .orderMenuPlusOrMinus {
+  width: 7rem;
+  margin-right: 11rem;
+}
+.priceCalculateWrap .calculateMiddle ul li .orderMenuPrice {
+  width: 14rem;
+  margin-right: 16rem;
+}
+.priceCalculateWrap .calculateMiddle ul li .orderMenuDelete {
+  width: 7rem;
+}
+.priceCalculateWrap .calculateBottom {
+  width: 106rem;
+  height: 8rem;
+  background-color: #d4e0ee;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.priceCalculateWrap .calculateBottom .resetBt,
+.priceCalculateWrap .calculateBottom .orderBt {
+  width: 33rem;
+  height: 8rem;
+  line-height: 8rem;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.modalOnBackground {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  background-color: rgba(3, 3, 3, 0.4);
+  z-index: 1;
+}
+
+.selectPage {
+  width: 80rem;
+  height: 100rem;
+  background-color: #ffdcdc;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: none;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 4rem;
+  border-radius: 3rem;
+}
+.selectPage .selectPageTop {
+  width: 72rem;
+  height: 36rem;
+  padding: 4rem;
+  border-radius: 3rem;
+  background-color: #fffbf3;
+}
+.selectPage .selectPageTop .selectPageMark {
+  width: 20rem;
+  height: 9rem;
+  transform: translate(-15%, -25%);
+  position: absolute;
+  background-image: url("../img/ddjCenterMark.png");
+  background-size: cover;
+  background-position: center;
+}
+.selectPage .selectPageTop .selectMenuImageBox {
+  width: 34rem;
+  height: 19rem;
+  margin: 7rem 2rem 0 -1rem;
+  float: left;
+  display: block;
+  background: gray;
+}
+.selectPage .selectPageTop .selectMenuName,
+.selectPage .selectPageTop .selectMenuPrice {
+  width: 29rem;
+  height: 6rem;
+  display: inline-block;
+  line-height: 6rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.selectPage .selectPageTop .selectMenuName {
+  margin-top: 10rem;
+}
+.selectPage .selectPageMiddle {
+  width: 72rem;
+  height: 36rem;
+  padding: 5rem;
+  background-color: #fffbf3;
+  margin: 3rem 0 4rem 0;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.selectPage .selectPageMiddle .selectMenuDescBox,
+.selectPage .selectPageMiddle .selectMenuFoodInfoBox,
+.selectPage .selectPageMiddle .selectMenuAllergyInfoBox {
+  width: 62rem;
+  height: 6rem;
+  line-height: 6rem;
+  font-size: 2rem;
+}
+.selectPage .selectPageBottom {
+  width: 72rem;
+  height: 13rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.selectPage .selectPageBottom .cansleBt,
+.selectPage .selectPageBottom .acceptBt {
+  width: 35rem;
+  height: 13rem;
+  line-height: 13rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 4rem;
+  border-radius: 3rem;
+  background-color: #fffbf3;
+}

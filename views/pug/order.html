@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko"></html>
+<head>
+  <title>OrderPage</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Pragma" content="no-chche">
+  <meta http-equiv="build" content="2023, 03, 29">
+  <meta http-equiv="Copyright" content="c17team03_choi_byung_hoon">
+  <meta http-equiv="Distribution" content="CHOI_BYUNG_HOON">
+  <meta http-equiv="Filename" content="teamProject.pug">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <!--link(rel="stylesheet", href="../../src/scss/order.css")-->
+  <script type="text/javascript" src="./js/order.js" defer></script>
+  <!--script(type="text/javascript", src="../../static/js/order.js", defer)-->
+  <link rel="stylesheet" href="./css/order.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+  <div class="modalOnBackground hoverEffect" id="modalOnBackground"></div>
+  <!--.selectPage
+  .selectPageTop
+    .selectPageMark
+    .selectMenuImageBox
+    .selectMenuName 메뉴 이름 : 가나다라마바사아자차
+    .selectMenuPrice 메뉴 금액 : 10000000원
+  .selectPageMiddle
+    .selectMenuDescBox 카라아게 (일본식 닭튀김) 미야자키 명물
+    .selectMenuFoodInfoBox (닭고기, 명란젓, 조각계란찜 , 장국) 429g , 967kcal
+    .selectMenuAllergyInfoBox 닭고기 , 명란젓 , 조각계란찜
+  .selectPageBottom
+    .cansleBt.hoverEffect 취소
+    .acceptBt.hoverEffect 담기
+  -->
+  <div class="totalWrapBox">
+    <header>
+      <div class="headerBox">
+        <div class="topFlowerImage"></div>
+        <div class="ddjMark"></div>
+        <div class="ddjCenterMark"></div>
+        <div class="sideFlowerImage"></div>
+      </div>
+    </header>
+    <section>
+      <nav>
+        <div class="sideMenu">
+          <div class="sideMenuTop">MENU</div>
+          <div class="sideMenuMainWrap">
+            <div class="maindishTab hoverEffect" id="maindishTab">
+              <div class="maindishImage" id="maindishImage"></div>
+              <div class="sideTabName pointFont" id="maindishTabName">정식</div>
+            </div>
+            <div class="noodleTab hoverEffect" id="noodleTab">
+              <div class="noodleImage" id="noodleImage"></div>
+              <div class="sideTabName pointFont" id="noodleTabName">면류</div>
+            </div>
+            <div class="singleMenuTab hoverEffect" id="singleMenuTab">
+              <div class="singleImage" id="singleImage"></div>
+              <div class="sideTabName pointFont" id="singleTabName">단품</div>
+            </div>
+            <div class="sodaTab hoverEffect" id="sodaTab">
+              <div class="sodaImage" id="sodaImage"></div>
+              <div class="sideTabName pointFont" id="sodaTabName">음료</div>
+            </div>
+            <div class="alcoholTab hoverEffect" id="alcoholTab">
+              <div class="alcoholImage" id="alcoholImage"></div>
+              <div class="sideTabName pointFont" id="alcoholTabName">주류</div>
+            </div>
+          </div>
+        </div>
+        <div class="mainMenuSection">
+          <!--#mainMenuWrap1.mainMenuWrap.mainMenuWrapOn-->
+          <!--  each menuList, index in setMenuList-->
+          <!--    .selectFoodBox.hoverEffect-->
+          <!--      .foodImage(style="background-image:url(../../static/img/mainMenu/1.png)")-->
+          <!--      .foodName.pointFont #{ index+1 }. #{ menuList.foodTitle }-->
+          <!--      .foodPrice.pointFont #{ menuList.foodPrice } 원-->
+          <!-- 세트메뉴가 19개가 넘어옴-->
+          <!--  .mainMenuWrap.mainMenuWrapOn(id=`mainMenuWrap${i+1}`)-->
+          <!--    - for( let j=0; j< 6; j++)-->
+          <!--      if (setMenuList[(6*i)+j])-->
+          <!--        .selectFoodBox.hoverEffect-->
+          <!--          .foodImage(-->
+          <!--            style=`background-image: url(./img/mainMenu/${setMenuList[6*i+j].imgUrl})`-->
+          <!--          )-->
+          <!--          .foodName.pointFont #{ setMenuList[6*i+j].foodTitle }-->
+          <!--          .foodPrice.pointFont #{ setMenuList[(6*i)+j].foodPrice }-->
+          <div class="mainMenuWrap" id="mainMenuWrap2">
+            <div class="selectFoodBox">
+              <div class="foodImage"></div>
+              <div class="foodName pointFont"></div>
+              <div class="foodPrice pointFont"></div>
+            </div>
+          </div>
+          <div class="mainMenuWrap" id="mainMenuWrap3">
+            <div class="selectFoodBox">
+              <div class="foodImage"></div>
+              <div class="foodName pointFont"></div>
+              <div class="foodPrice pointFont"></div>
+            </div>
+          </div>
+          <div class="mainMenuWrap" id="mainMenuWrap4">
+            <div class="selectFoodBox">
+              <div class="foodImage"></div>
+              <div class="foodName pointFont"></div>
+              <div class="foodPrice pointFont"></div>
+            </div>
+          </div>
+          <div class="mainMenuWrap" id="mainMenuWrap5">
+            <div class="selectFoodBox">
+              <div class="foodImage"></div>
+              <div class="foodName pointFont"></div>
+              <div class="foodPrice pointFont"></div>
+            </div>
+          </div>
+          <div class="mainMenuNav">
+            <button class="mainMenuLeftBt hoverEffect pointFont" id="mainMenuLeftBt" type="button">&lt</button>
+            <div class="mainMenuPositionBar">
+              <div class="mainMenuPositionCircle hoverEffect"></div>
+              <div class="mainMenuPositionCircle hoverEffect"></div>
+              <div class="mainMenuPositionCircle hoverEffect"></div>
+            </div>
+            <button class="mainMenuRightBt hoverEffect pointFont" id="mainMenuRightBt" type="button">&gt</button>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <footer>
+      <div class="priceCalculateWrap">
+        <div class="calculateTop">
+          <div class="totalSelectTitle">선택내역</div>
+          <div class="totalPriceResult">10000000원</div>
+          <div class="totalPrice">합계</div>
+        </div>
+        <div class="calculateMiddle">
+          <ul>
+            <li>
+              <div class="orderMenuNum">1.</div>
+              <div class="orderMenuName">호르몬 모츠나베 정식</div>
+              <div class="orderMenuPlusOrMinus">- 2 +</div>
+              <div class="orderMenuPrice">33,333 원</div>
+              <div class="orderMenuDelete hoverEffect">취소</div>
+            </li>
+          </ul>
+        </div>
+        <div class="calculateBottom">
+          <div class="resetBt hoverEffect">초기화</div>
+          <div class="orderBt hoverEffect" id="orderBt">주문하기</div>
+        </div>
+      </div>
+    </footer>
+    <div class="selectPage" id="selectPage">
+      <div class="selectPageTop">
+        <div class="selectPageMark"></div>
+        <div class="selectMenuImageBox"></div>
+        <div class="selectMenuName">메뉴 이름 : 가나다라마바사아자차</div>
+        <div class="selectMenuPrice">메뉴 금액 : 10000000원</div>
+      </div>
+      <div class="selectPageMiddle">
+        <div class="selectMenuDescBox">카라아게 (일본식 닭튀김) 미야자키 명물</div>
+        <div class="selectMenuFoodInfoBox">(닭고기, 명란젓, 조각계란찜 , 장국) 429g , 967kcal</div>
+        <div class="selectMenuAllergyInfoBox">닭고기 , 명란젓 , 조각계란찜</div>
+      </div>
+      <div class="selectPageBottom">
+        <div class="cansleBt hoverEffect" id="cansleBt">취소</div>
+        <div class="acceptBt hoverEffect" id="acceptBt">담기</div>
+      </div>
+    </div>
+  </div>
+</body>

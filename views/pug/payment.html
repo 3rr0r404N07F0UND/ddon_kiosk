@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-chche">
+    <meta http-equiv="build" content="2023, 03, 29">
+    <meta http-equiv="Copyright" content="c17team03_oh_hye_rim">
+    <meta http-equiv="Distribution" content="OH_HRE_RIM">
+    <meta http-equiv="Filename" content="payment.pug">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="./css/payment.css">
+    <script type="text/javascript" src="./js/payment.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <title>payment</title>
+  </head>
+  <body>
+    <section class="allBox">
+      <header>
+        <section>
+          <div class="titleLeft"><a href="#"><i class="xi-home"></i><span class="pointFont">HOME</span></a></div>
+          <div class="titleRight"><img src="../../static/img/textLogo.png" alt="텍스트로고"></div>
+        </section>
+      </header>
+      <section class="paymentMain">
+        <p class="titleOne">주문내역을 확인하신 후 <br /> 결제를 진행해 주세요.</p>
+        <p class="titleTwo">주문내역</p>
+        <hr>
+        <div class="menuBox">
+          <div class="menuMiniBox">번호</div>
+          <div class="menuMiniBox">주문 제품</div>
+          <div class="menuMiniBox">주문 수량</div>
+          <div class="menuMiniBox">금액</div>
+          <div class="menuMiniBox">삭제</div>
+        </div>
+        <ul class="menuOrderList">
+          <li id="id0">
+            <div class="menuNum">1</div>
+            <div class="menuName">돈까스 정식</div>
+            <div class="menuCountBox">
+              <button class="menuPlusBtn" id="plusBtn">+</button>
+              <div class="menuCount">1</div>
+              <button class="menuMinusBtn" id="minusBtn">-</button>
+            </div>
+            <div class="menuAmount">10000</div>
+            <button class="menuDelete">삭제</button>
+          </li>
+          <li id="id1">
+            <div class="menuNum">2</div>
+            <div class="menuName">메론 정식</div>
+            <div class="menuCountBox">
+              <button class="menuPlusBtn" id="plusBtn">+</button>
+              <div class="menuCount">3</div>
+              <button class="menuMinusBtn" id="minusBtn">-</button>
+            </div>
+            <div class="menuAmount">10000</div>
+            <button class="menuDelete">삭제 </button>
+          </li>
+        </ul>
+      </section>
+      <footer>
+        <section class="footerTop">
+          <div class="allOrder">총 주문 수량</div>
+          <div class="allOrderCounter fontBold" id="allOrderCount">1</div>
+          <div class="allOrderResult">개</div>
+          <div class="allOrder">총 주문 금액</div>
+          <div class="allOrderCounter fontBold" id="allPrice">10000</div>
+          <div class="allOrderResult">원</div>
+        </section>
+        <section class="footerBottom"> 
+          <div class="footerBtnBox">
+            <form action="/order" method="get">
+              <input class="footerBtn" type="submit" value="이전">
+            </form>
+            <button class="footerBtn" id="footerBtnOk1">결제하기</button>
+          </div>
+        </section>
+      </footer>
+      <!--모달 시작, 모달 배경 - 투명 검정-->
+      <section class="modalBg">
+        <!--포인트 적립할 번호 입력 모달  -->
+        <section class="phoneNumberBox">
+          <p class="fontBold">포인트를 적립할 번호를 입력해 주세요.</p>
+          <form class="phoneNumberInput" action="/ajaxPoint" method="get">
+            <input type="number" name="phoneNumber">
+          </form>
+          <div class="keyPadBox">
+            <button class="numberPad">7</button>
+            <button class="numberPad">8</button>
+            <button class="numberPad">9</button>
+            <button class="numberPad">4</button>
+            <button class="numberPad">5</button>
+            <button class="numberPad">6</button>
+            <button class="numberPad">1</button>
+            <button class="numberPad">2</button>
+            <button class="numberPad">3</button>
+            <button class="textPad" id="resetBtn">초기화</button>
+            <button class="numberPad">0</button>
+            <button class="textPad" id="removeBtn">←</button>
+          </div>
+          <div class="modalButtonBox">
+            <button class="phoneNumberBtn" id="notPoint">적립안함</button>
+            <button class="phoneNumberBtn" id="okPoint"> 확인</button>
+          </div>
+        </section>
+        <!-- 포인트 사용 모달-->
+        <section class="usePointBox">
+          <p class="pay">결제하기</p>
+          <hr>
+          <section class="paymentBox">
+            <div class="resultTextMenu">총 금액</div>
+            <div class="resultNumberMenu" id="totalPrice">50000</div>
+            <div class="price">원</div>
+            <div class="resultTextMenu">보유 포인트</div>
+            <div class="resultNumberMenu" id="havePoint">2000</div>
+            <div class="price">p</div>
+          </section>
+          <section class="keyPadArea">
+            <p>사용 포인트</p>
+            <section class="inputPhoneNumber">
+              <div class="minusPointDiv">-</div>
+              <form action="/" method="get">
+                <input class="numberInputBox" type="number" name="usePoint" placeholder="사용할 포인트를 입력해 주세요.">
+              </form>
+              <div class="minusPointDiv">p</div>
+            </section>
+            <div class="keyPadBox2">
+              <button class="numberPad2">7</button>
+              <button class="numberPad2">8</button>
+              <button class="numberPad2">9</button>
+              <button class="numberPad2">4</button>
+              <button class="numberPad2">5</button>
+              <button class="numberPad2">6</button>
+              <button class="numberPad2">1</button>
+              <button class="numberPad2">2</button>
+              <button class="numberPad2">3</button>
+              <button class="textPad2" id="resetBtn2">초기화</button>
+              <button class="numberPad2">0</button>
+              <button class="textPad2" id="removeBtn2">←</button>
+            </div>
+          </section>
+          <hr>
+          <section class="totalResult">
+            <div>최종 결제 금액</div>
+            <div id="finalTotalPrice">50000</div>
+            <div>원</div>
+          </section>
+          <section class="totalResultBtnBox">
+            <button id="paymentCancelBtn">취소</button>
+            <button id="paymentGoBtn">결제 </button>
+          </section>
+        </section>
+        <!--카드 결제 모달-->
+        <section class="cardModalBox"><img src="../../static/img/card.png" alt="카드">
+          <div>결제하실 카드를 넣어 주세요<br>삼성페이나 다른 NFC결제도 지금 접속해주세요</div>
+          <button>취소</button>
+        </section>
+        <!--결제 진행중 모달-->
+        <section class="paymentModal"><i class="xi-spinner-1 xi-spin"></i>
+          <div><span>결제가 진행중입니다</span><br>잠시만 기다려주세요</div>
+        </section>
+        <!--결제 완료 모달-->
+        <section class="completeModal"><i class="xi-check-square-o"></i>
+          <div class="smallFont">결제가 정상적으로 완료되었습니다.</div>
+          <div class="bigFontBox">
+            <div class="bigFont">10</div>
+            <div class="bigFont">초후에 자동으로 종료됩니다</div>
+          </div>
+          <div class="completeModalBtnBox">
+            <form action="/" method="get">
+              <input class="completeModalBtn" type="submit" value="영수증 출력">
+            </form>
+            <form action="/" method="get">
+              <input class="completeModalBtn" type="submit" value="종료">
+            </form>
+          </div>
+        </section>
+        <!--경고 창 모달-->
+        <section class="alertModalBg">
+          <section class="alertModal">
+            <div class="alertModalContent">올바른 전화번호 형태가 아닙니다. </div>
+            <button class="alertModalBtn">확인</button>
+          </section>
+        </section>
+      </section>
+    </section>
+  </body>
+</html>

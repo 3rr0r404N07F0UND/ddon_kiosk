@@ -1,0 +1,75 @@
+doctype html
+html(lang="ko-KR")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="Cache-Control", content="no-cache")
+    meta(http-equiv="Pragma", content="no-chche")
+    meta(http-equiv="build", content="2023, 03, 29")
+    meta(http-equiv="Copyright", content="c17team03_seo_dong_min")
+    meta(http-equiv="Distribution", content="SEO_DONG_MIN")
+    meta(http-equiv="Filename", content="admin.pug")
+    link(rel="icon", type="icon", href="./img/favicon.ico")
+    meta(name="robots", content="noindex, nofollow, noarchive")
+    link(rel="stylesheet", href="./css/adminAccess.css")
+    script(
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js",
+      integrity="sha512-6DC1eE3AWg1bgitkoaRM1lhY98PxbMIbhgYCGV107aZlyzzvaWCW1nJW2vDuYQm06hXrW0As6OGKcIaAVWnHJw==",
+      crossorigin="anonymous"
+    )
+    script(src="https://unpkg.com/adorable-css", defer)
+    script(src="./js/adminAccessPage.js", defer)
+    link(
+      rel="stylesheet",
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    )
+    title 관리자 페이지
+  body(class="bg(white)")
+    main
+      h1 주문내역
+        a.xi-home(href="/"
+          class="background-color(#ea8778) border(none) display(inline-block) hover:color(white)"
+        )
+      nav(class="w(100%) bg(#E2B9B7)")
+        form.box-sizing(
+          method="post",
+          action="/adminAccessPage",
+          class="h(100%) p(20) display(flex) justify-content(center)"
+        )
+          input#selectDateStart(
+            type="date",
+            name="selectDateStart",
+            class="mr(10)",
+            value=date1
+          )
+          input#selectDateEnd(
+            type="date",
+            name="selectDateEnd",
+            class="mr(10)",
+            value=date2
+          )
+          input(type="hidden", name="adminPassword", value="1234")
+          button#submitButton(class="c(white)", type="button") 전송
+          input#submitHidden(type="submit", class="display(none)")
+      output.printSection(class="pb(300)")
+        h2(
+          class="text-align(center) font-size(40) background-color(#fffbf3) border(1px/solid/black)"
+        ) 총합: #{ totalPrice }
+        ul
+          li.border-box(class="text-align(center)") 총합
+          li.border-box(class="text-align(center)") 메뉴 이름
+          li.border-box(class="text-align(center)") 회원 정보
+          li.border-box(class="text-align(center)") 총합
+        each value, index in result
+          ul
+            li.border-box(class="overflow(auto)") #{ index + 1 }
+            li.border-box.orderHistory(class="overflow(auto)") #{ value.orderHistory }
+            li.border-box(class="overflow(auto)") #{ value.membershipNumber }
+            li.border-box.totalPrice(class="overflow(auto)") #{ value.totalPrice }
+        //each value in result
+        //  ul
+        //    li #{ value.orderNumber }
+        //    li #{ value.orderHistory }
+        //    li #{ value.membershipNumber }
+        //    li #{ value.orderDateInfo } #{ value.orderTimeInfo }
