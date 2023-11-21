@@ -4,7 +4,9 @@
 
 ### 계획표
 
-![1679959286079](readme_src/sc.png)
+![계획표](readme_src/sc.png)
+
+---
 
 ### 페르소나
 
